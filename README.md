@@ -105,6 +105,13 @@ What this means for you:
   copy (about 69 kB gzip instead of 1 kB) and runs in any micro-lc host.
 - `pnpm dev` is unaffected: it resolves React from `node_modules`.
 
+## Why Vite
+
+micro-lc's own React template builds its UMD parcel with webpack through Create React App and
+craco; CRA is deprecated. Nothing in micro-lc depends on webpack: it needs a classic UMD script that
+exports the lifecycles, and Vite's library mode emits exactly that (`formats: ['umd']`) with
+externals and globals, from the same toolchain as the other orchestrator templates.
+
 ## Adding it to a host
 
 In the host's runtime micro-lc config, one application per microfrontend, its entry resolved by
