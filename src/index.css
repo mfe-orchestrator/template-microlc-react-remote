@@ -1,0 +1,24 @@
+/* Injected into the page while the parcel is mounted (see src/parcel.tsx). micro-lc
+   does not isolate styles, so every rule is scoped under the parcel's wrapper. */
+.microlc-react-remote {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  color: #213547;
+  padding: 2rem;
+  text-align: center;
+}
+
+.microlc-react-remote h1 {
+  font-size: 2.4em;
+  line-height: 1.1;
+}
+
+.microlc-react-remote .shared-btn {
+  background-color: blueviolet;
+  border: 1px solid white;
+  border-radius: 8px;
+  color: white;
+  padding: 24px 48px;
+  font-size: 24px;
+  cursor: pointer;
+}
